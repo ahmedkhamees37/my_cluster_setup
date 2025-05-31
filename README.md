@@ -16,9 +16,9 @@ You can find all the code right here: [https://github.com/ahmedkhamees37/my_clus
 
 ---
 
-## What can this do for you? ✨
+## What can this Ansible project do for you? ✨
 
-This awesome setup handles a bunch of things to get your cluster humming:
+This awesome **Ansible-powered** setup handles a bunch of things to get your cluster humming:
 
 * **Installs all the goodies**: Gets `pacemaker`, `corosync`, and `pcs` installed on every node.
 * **Network wizardry**: Sets up your network interfaces perfectly for that crucial cluster heartbeat.
@@ -31,7 +31,7 @@ This awesome setup handles a bunch of things to get your cluster humming:
 
 ---
 
-## Before you dive in... 🛠️
+## Before you dive in with Ansible... 🛠️
 
 Just a few things you'll need to have ready:
 
@@ -43,7 +43,7 @@ Just a few things you'll need to have ready:
 
 ---
 
-## Ready to roll? Let's go! 🚀
+## Ready to roll? Let's go with Ansible! 🚀
 
 Getting your cluster up and running is super easy:
 
@@ -57,7 +57,7 @@ Getting your cluster up and running is super easy:
 
 3.  **Customize (and secure!)**: Tweak variables like your `pcs_password` in your inventory, or even better, use **Ansible Vault** for top-notch security!
 
-4.  **Unleash the playbook!**:
+4.  **Unleash the Ansible playbook!**:
     ```bash
     ansible-playbook -i inventory.ini playbook.yml
     ```
@@ -75,7 +75,7 @@ Getting your cluster up and running is super easy:
 
 ## Want to contribute? We'd love that! 💖
 
-Have ideas? Found a bug? Want to add a cool feature? We're all ears! Feel free to [open an issue](https://github.com/ahmedkhamees37/my_cluster_setup/issues) or [submit a pull request](https://github.com/ahmedkhamees37/my_cluster_setup/pulls). Your contributions make this project even better!
+Have ideas? Found a bug? Want to add a cool feature? We're all ears! Feel free to [open an issue](https://github.com/ahmedkhamees37/my_cluster_setup/issues) or [submit a pull request](https://github.com/ahmedkhamees37/my_cluster_setup/pulls). Your contributions make this **Ansible project** even better!
 
 ---
 
@@ -91,8 +91,8 @@ Have questions or just want to say hi?
 
 **Ahmed Khamees**
 * **GitHub**: [@ahmedkhamees37](https://github.com/ahmedkhamees37)
-* **Email**: your-email@example.com
+* **Email**: ahmedkhamees37@gmail.com
 
 ---
 
-Ready to build your robust, high-availability cluster with ease? Let me know if you have any questions!
+Ready to build your robust, high-availability cluster with ease using **Ansible**? Let me know if you have any questions!
