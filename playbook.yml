@@ -1,0 +1,7 @@
+- hosts: cluster_nodes
+  become: true
+  roles:
+    - configure_os
+    - install_pacemaker
+    - configure_pacemaker
+    - floating_ip_resource

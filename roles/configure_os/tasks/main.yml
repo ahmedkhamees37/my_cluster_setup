@@ -1,0 +1,19 @@
+- name: Set Hostname
+  ansible.builtin.hostname:
+    name: "{{ inventory_hostname }}"
+
+- name: Update /etc/hosts
+  ansible.builtin.template:
+    src: hosts.j2
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Configure Timezone
+  ansible.builtin.command: timedatectl set-timezone {{ timezone }}
+
+- name: Configure Heartbeat (Cluster) Network Interface
+  ansible.builtin.shell: |
+    nmcli con mod {{ connection_name }} ipv4.addresses {{ ansible_host }}/{{ netmask }}
+    nmcli con up {{ connection_name }}

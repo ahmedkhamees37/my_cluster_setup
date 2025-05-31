@@ -1,0 +1,25 @@
+- name: Install Pacemaker and related packages
+  ansible.builtin.yum:
+    name:
+      - pacemaker
+      - corosync
+      - pcs
+    state: present
+
+- name: Start and Enable pcsd service
+  ansible.builtin.systemd:
+    name: pcsd
+    enabled: true
+    state: started
+
+- name: Set hacluster password securely
+  ansible.builtin.user:
+    name: hacluster
+    password: "{{ pcs_password | password_hash('sha512') }}"
+    update_password: always
+  become: true
+
+- name: Authenticate nodes
+  ansible.builtin.shell: pcs cluster auth node3 node4 -u hacluster -p "{{ pcs_password }}"
+  ignore_errors: true
+

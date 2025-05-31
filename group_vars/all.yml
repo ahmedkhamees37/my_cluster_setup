@@ -1,0 +1,9 @@
+pcs_password: "redhatcluster"
+floating_ip: "192.168.171.200"
+netmask: "24"
+cluster_iface: "ens33"
+timezone: "UTC"
+cluster_name: "mycluster"
+hosts_entries:
+  - "192.168.171.131 node3"
+  - "192.168.171.132 node4"

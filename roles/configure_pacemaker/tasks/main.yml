@@ -1,0 +1,19 @@
+- name: Setup Cluster
+  ansible.builtin.shell: pcs cluster setup --name {{ cluster_name }} node3 node4
+  notify: Restart pacemaker
+
+- name: Start Cluster
+  ansible.builtin.shell: pcs cluster start --all
+
+- name: Enable Cluster at Boot
+  ansible.builtin.shell: pcs cluster enable --all
+
+- name: Set Quorum Policy
+  ansible.builtin.shell: pcs property set no-quorum-policy=ignore
+
+- name: Check Cluster Status
+  ansible.builtin.shell: pcs status
+  register: cluster_status
+
+- debug:
+    var: cluster_status.stdout
